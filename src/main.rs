@@ -218,12 +218,12 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
 
     if socks_nodes.is_empty() {
-        eprintln!("❌ 未找到任何 socks 类型 inbound");
+        eprintln!("未找到任何 socks 类型 inbound");
         return Ok(());
     }
 
     println!(
-        "✅ 找到 {} 个 socks 节点，开始顺序测试（每节点10次，取中间值）\n",
+        "找到 {} 个 socks 节点，开始顺序测试（每节点10次）\n",
         socks_nodes.len()
     );
 
