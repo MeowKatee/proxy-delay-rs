@@ -151,7 +151,7 @@ async fn test_node_latency(port: u16, test_count: usize) -> LatencyResult {
 
     // Calculate median
     let mut sorted = valid_latencies;
-    sorted.sort_by(|a, b| a.partial_cmp(b).unwrap());
+    sorted.sort_unstable_by(|a, b| a.partial_cmp(b).unwrap());
     let median = sorted[sorted.len() / 2];
     let average = sorted.iter().sum::<f64>() / sorted.len() as f64;
 
