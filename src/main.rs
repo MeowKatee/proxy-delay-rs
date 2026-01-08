@@ -1,4 +1,4 @@
-use clap::Parser;
+use palc::Parser;
 use regex::RegexSet;
 use reqwest::{Client, Proxy};
 use serde::Deserialize;
@@ -8,7 +8,7 @@ use tokio::time::timeout;
 
 #[derive(Parser)]
 #[command(name = "singbox-tester")]
-#[command(about = "Test SingBox proxy nodes latency")]
+#[command(long_about = "Test SingBox proxy nodes latency")]
 struct Args {
     /// Path to the SingBox config JSON file
     config_path: String,
