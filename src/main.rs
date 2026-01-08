@@ -277,7 +277,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                 println!("{:<4} {:<12} {median:<8.2} {average:<8.2} {minimum:<8.2} {maximum:<8.2} {tag:<45}", rank, port);
             }
             _ => {
-                println!("{:<4} {:<12} {latency:<35} {:<45}", rank, port, tag);
+                println!("{:<4} {:<12} {latency:35} {:<45}", rank, port, tag);
             }
         }
     }
